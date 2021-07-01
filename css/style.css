@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+/* Variables */
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+/* Global */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-light-gray);
+}
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1em 0;
+  color: var(--Very-light-gray);
+}
+p {
+  color: var(--Transparent-white);
+  margin-bottom: 1em;
+}
+button {
+  border: 0;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Very-light-gray);
+  border: 2px solid var(--Very-light-gray);
+  color: inherit;
+  border-radius: 3rem;
+  padding: 0.75em 1.5em;
+}
+button:active {
+  background-color: transparent;
+  color: var(--Very-light-gray);
+}
+/* Main styling */
+.container {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.container > *:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.container > *:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 1100px;
+    display: flex;
+  }
+  .container > *:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .container > *:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  p {
+    margin-bottom: 5em;
+  }
+}
+.card {
+  padding: 2rem;
+}
+.card.sedans {
+  background-color: var(--Bright-orange);
+  color: var(--Bright-orange);
+}
+.card.suvs {
+  background-color: var(--Dark-cyan);
+  color: var(--Dark-cyan);
+}
+.card.luxury {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-dark-cyan);
+}
